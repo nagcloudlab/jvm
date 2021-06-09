@@ -1,0 +1,5 @@
+/home/naga/eclipse-workspace/dropwizard-book-service/src/main/java/com/example/service/BookService.java
+/home/naga/eclipse-workspace/dropwizard-book-service/src/main/java/com/example/model/Book.java
+/home/naga/eclipse-workspace/dropwizard-book-service/src/main/java/com/example/health/SampleHealthCheck.java
+/home/naga/eclipse-workspace/dropwizard-book-service/src/main/java/com/example/resource/BookResource.java
+/home/naga/eclipse-workspace/dropwizard-book-service/src/main/java/com/example/DropwizardApplication.java

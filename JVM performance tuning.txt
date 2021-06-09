@@ -1,0 +1,107 @@
+
+
+-----------------------------------------------------------------------
+1- JIT
+-----------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------
+2. String Table
+-----------------------------------------------------------------------
+
+    => How the string table is implemented
+
+    => Understand the size and density of the string pool
+
+        -XX:+PrintStringTableStatistics
+
+    => Tuning the size of string table size
+
+        -XX:StringTableSize=120121
+
+    => Tuning the size of heap
+
+        -XX:+UnlockDiagnosticVMOptions 
+        
+        -XX:+PrintFlagsFinal
+
+        -XX:MaxHeapSize=600m
+
+        -Xmx
+        -Xms
+
+    
+-----------------------------------------------------------------------
+3. Introducing Garbage Collection
+-----------------------------------------------------------------------
+
+
+    => What it means when we say Java is a managed language
+
+    => How Java knows which objects can be removed from the Heap
+
+    => System.gc()
+
+    => finalize()
+
+-----------------------------------------------------------------------
+ 4. Monitoring the Heap
+-----------------------------------------------------------------------
+
+    => What is a soft leak?
+
+    => Introducing (J)VisualVM
+
+    => Monitoring the size of the heap over time
+
+    => Fixing the problem and checking the heap size
+
+
+-----------------------------------------------------------------------
+5. Analysing a heap dump
+-----------------------------------------------------------------------
+
+    => Generating a heap dump
+
+        jmap -dump:live,file=/opt/tmp/heapdump.bin 37320
+
+        -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/heapdump
+
+
+        Reference :
+        https://blog.heaphero.io/2017/10/13/how-to-capture-java-heap-dumps-7-options/
+        https://blog.heaphero.io/2018/03/27/how-to-diagnose-memory-leaks/
+        https://blog.heaphero.io/2019/06/21/outofmemoryerror-related-jvm-arguments/
+        https://blog.heaphero.io/2019/06/12/automating-outofmemoryerror-troubleshooting/
+
+        https://examples.javacodegeeks.com/java-heap-and-stack/
+
+
+        JVM arguments:
+
+        1. -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath
+        2. -XX:OnOutOfMemoryError
+        3. -XX:+CrashOnOutOfMemoryError
+        4. -XX:+ExitOnOutOfMemoryError
+
+
+
+    => Viewing a heap dump
+
+        
+        https://blog.tier1app.com/2015/06/01/eclipse-mat-titbits/
+        https://blog.heaphero.io/2021/03/08/troubleshooting-outofmemoryerror-heap-dump-eclipse-mat/
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
